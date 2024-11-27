@@ -1,0 +1,281 @@
+/* Reset margin and padding for the whole page */
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    height: 100%; /* Ensure the body takes up full height */
+    overflow: hidden; /* Disable scrolling on all pages */
+}
+
+
+
+/* Header styling */
+header {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+    border-bottom: 1px solid #ccc;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Navigation Links */
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: gray;
+}
+/* Logo Image Styling */
+.logo img {
+    height: 70px; /* Adjust the size as needed */
+    width: auto; /* Maintain aspect ratio */
+    display: block;
+}
+/* Body Adjustments to prevent overlap with fixed header */
+body {
+    padding-top: 70px; /* Adjust body padding to accommodate the fixed header */
+}
+
+/* Homepage content */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px); /* Adjust height to prevent overlap with the fixed header */
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background-image: url('https://wallpapercave.com/wp/wp2942773.jpg');
+    background-size: cover;
+    background-position: center;
+}
+/* About Us Section */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 0 20px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Adjust text container */
+.about-text {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-text h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3rem; /* Increase the font size */
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* About image styles */
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Support Section */
+.support-section {
+    max-height: 90vh; /* Set a max height for the section */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px;
+    background: linear-gradient(to bottom, #ffffff, #f3f3f3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.support-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+}
+
+.support-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.contact-box {
+    flex: 1;
+    max-width: 300px;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-box h2 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.contact-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* FAQ Section */
+.faq-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 60vh; /* Set a max height for the FAQ section */
+    overflow-y: auto; /* Enable scrolling within the FAQ section */
+}
+
+.faq-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.faq {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.faq h3 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.faq p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-box {
+        max-width: 100%;
+    }
+}
+
+/* Bikes Page Styling - Scrollable */
+.bikes-section {
+    text-align: center;
+    padding: 20px 20px 40px;
+    background-color: #f9f9f9;
+    max-height: 80vh; /* Limit height */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    margin-top: 70px; /* Offset the header to prevent overlap */
+    height: 100%; /* Ensure full height of container */
+}
+
+.bikes-section h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.bikes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible grid layout */
+    gap: 20px;
+}
+
+.bike-box {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.bike-box img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.bike-box p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bikes-container {
+        flex-direction: column;
+    }
+
+    .bike-box {
+        width: 100%;
+    }
+}
