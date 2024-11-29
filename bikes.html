@@ -16,53 +16,123 @@
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="support.html">Support</a>
-            <a href="bikes.html">Bikes</a>
+            <a href="bikes.html" class="active">Bikes</a>
+            <a href="cart.html">Cart</a>
         </nav>
     </header>
+    <div class="hero-section">
+        <h1>Explore Our Premium Bikes</h1>
+        <p>Find your perfect ride, designed for performance and style.</p>
+    </div>
     <div class="bikes-section">
-        <h1>Our Bikes</h1>
+        <h2>Our Bikes</h2>
+        <div class="search-container">
+            <input type="text" id="bikeSearch" placeholder="Search for a bike..." onkeyup="filterBikes()">
+        </div>
         <div class="bikes-container">
-            <!-- Row 1 -->
+            <!-- Bike 1 -->
             <div class="bike-box">
-                <img src="https://assets.specialized.com/i/specialized/90022-72_ALLEZ-E5-DISC-MRN-SILDST-FLORED_HERO-SQUARE?$scom-plp-product-image-square$&fmt=webp" alt="Bike 1">
-                <p>Bike Model 1</p>
+                <a href="allez.html" class="bike-link">
+                    <img src="https://assets.specialized.com/i/specialized/90022-72_ALLEZ-E5-DISC-MRN-SILDST-FLORED_HERO-SQUARE?$scom-plp-product-image-square$&fmt=webp" alt="Bike 1">
+                    <p class="bike-name">Allez</p>
+                    <p class="bike-price">$1,200</p>
+                    <p class="bike-description">A lightweight aluminum road bike perfect for beginners and casual riders.</p>
+                </a>
             </div>
+            <!-- Bike 2 -->
             <div class="bike-box">
-                <img src="https://example.com/bike2.jpg" alt="Bike 2">
-                <p>Bike Model 2</p>
+                <a href="allezsprint.html" class="bike-link">
+                    <img src="https://assets.specialized.com/i/specialized/90025-51_ALLEZ-SPRINT-COMP-DPLAKEMET-BNTGLDMET_HERO-SQUARE?$scom-plp-product-image-square$&fmt=webp" alt="Bike 2">
+                    <p class="bike-name">Allez Sprint</p>
+                    <p class="bike-price">$2,300</p>
+                    <p class="bike-description">Engineered for speed, this bike is ideal for competitive road cycling.</p>
+                </a>
             </div>
+            <!-- Bike 3 -->
             <div class="bike-box">
-                <img src="https://example.com/bike3.jpg" alt="Bike 3">
-                <p>Bike Model 3</p>
+                <a href="tarmacsl8.html" class="bike-link">
+                    <img src="https://assets.specialized.com/i/specialized/94925-00_TARMAC-SL8-SW-DI2-SILDST-DOVGRY-BLKPRL_HERO-SQUARE?$scom-plp-product-image-square$&fmt=webp" alt="Bike 3">
+                    <p class="bike-name">Tarmac SL8</p>
+                    <p class="bike-price">$3,500</p>
+                    <p class="bike-description">A high-performance carbon road bike for elite cyclists.</p>
+                </a>
             </div>
-            <!-- Row 2 -->
+            <!-- Bike 4 -->
             <div class="bike-box">
-                <img src="https://example.com/bike4.jpg" alt="Bike 4">
-                <p>Bike Model 4</p>
+                <a href="stumpjumper.html" class="bike-link">
+                    <img src="https://assets.specialized.com/i/specialized/93325-10_SJ-15-PRO-GRNTNT-GUN-METSLPHR_HERO-SQUARE?$scom-plp-product-image-square$&fmt=webp" alt="Bike 4">
+                    <p class="bike-name">Stumpjumper</p>
+                    <p class="bike-price">$4,000</p>
+                    <p class="bike-description">A top-notch mountain bike for off-road challenges.</p>
+                </a>
             </div>
+            <!-- Bike 5 -->
             <div class="bike-box">
-                <img src="https://example.com/bike5.jpg" alt="Bike 5">
-                <p>Bike Model 5</p>
+                <a href="enduro.html" class="bike-link">
+                    <img src="https://assets.specialized.com/i/specialized/93625-30_ENDURO-PRO-CYPRMET-IONMET_HERO-SQUARE?$scom-plp-product-image-square$&fmt=webp" alt="Bike 5">
+                    <p class="bike-name">Enduro</p>
+                    <p class="bike-price">$2,800</p>
+                    <p class="bike-description">A versatile gravel bike for mixed terrain adventures.</p>
+                </a>
             </div>
+            <!-- Bike 6 -->
             <div class="bike-box">
-                <img src="https://example.com/bike6.jpg" alt="Bike 6">
-                <p>Bike Model 6</p>
+                <a href="epic.html" class="bike-link">
+                    <img src="https://assets.specialized.com/i/specialized/93123-30_EPIC-WC-EXPERT-CARB-WHT-PRL_HERO-SQUARE?$scom-plp-product-image-square$&fmt=webp" alt="Bike 6">
+                    <p class="bike-name">Epic</p>
+                    <p class="bike-price">$3,800</p>
+                    <p class="bike-description">XC with unmatched combination of efficiency, control, and light-weight.</p>
+                </a>
             </div>
-            <!-- Row 3 -->
-            <div class="bike-box">
-                <img src="https://example.com/bike7.jpg" alt="Bike 7">
-                <p>Bike Model 7</p>
-            </div>
-            <div class="bike-box">
-                <img src="https://example.com/bike8.jpg" alt="Bike 8">
-                <p>Bike Model 8</p>
-            </div>
-            <div class="bike-box">
-                <img src="https://example.com/bike9.jpg" alt="Bike 9">
-                <p>Bike Model 9</p>
-            </div>
+            <p id="noResults" style="display: none; color: red; text-align: center;">No bikes match your search.</p>
         </div>
     </div>
-    
+    <div class="footer">
+        <div class="footer-section">
+            <h3>Speedbikes</h3>
+            <p>Made for riders, by riders</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="support.html">Support</a>
+            <a href="bikes.html">Bikes</a>
+        </div>
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p>Email: support@speedbikes.com</p>
+            <p>Phone: +123 456 7890</p>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">Twitter</a>
+        </div>
+    </div>
+    <script src="cart.js"></script>
 </body>
+<script>
+   function filterBikes() {
+    const input = document.getElementById('bikeSearch');
+    const filter = input.value.toLowerCase();
+    const bikes = document.querySelectorAll('.bike-box');
+    let visibleCount = 0;
+
+    bikes.forEach(bike => {
+        const bikeName = bike.querySelector('.bike-name').textContent.toLowerCase();
+        if (bikeName.includes(filter)) {
+            bike.style.visibility = "visible";
+            bike.style.position = "static";
+            visibleCount++;
+        } else {
+            bike.style.visibility = "hidden";
+            bike.style.position = "absolute";
+        }
+    });
+
+    document.getElementById('noResults').style.display = visibleCount === 0 ? "block" : "none";
+}
+</script>
 </html>

@@ -1,9 +1,12 @@
-/* Reset margin and padding for the whole page */
 body {
     margin: 0;
     font-family: 'Roboto', Arial, sans-serif;
-    height: 100%; /* Ensure the body takes up full height */
-    overflow: hidden; /* Disable scrolling on all pages */
+    height: 100%;
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 
@@ -15,7 +18,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+    background-color: rgba(255, 255, 255, 0.8); 
     border-bottom: 1px solid #ccc;
     position: fixed;
     width: 100%;
@@ -36,29 +39,147 @@ header nav a {
 header nav a:hover {
     color: gray;
 }
-/* Logo Image Styling */
+
 .logo img {
-    height: 70px; /* Adjust the size as needed */
-    width: auto; /* Maintain aspect ratio */
+    height: 70px; 
+    width: auto; 
     display: block;
 }
-/* Body Adjustments to prevent overlap with fixed header */
+
 body {
-    padding-top: 70px; /* Adjust body padding to accommodate the fixed header */
+    padding-top: 70px; 
 }
+
+
 
 /* Homepage content */
 .content {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 70px); /* Adjust height to prevent overlap with the fixed header */
-    text-align: center;
+    height: calc(100vh - 70px); 
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    background-image: url('https://wallpapercave.com/wp/wp2942773.jpg');
     background-size: cover;
     background-position: center;
+    animation: backgroundChange 10s infinite alternate; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.homepage-section {
+    display: flex;
+    width: 100%;
+    height: 50vh; 
+}
+
+.homepage-image {
+    flex: 1; 
+    position: relative; 
+    overflow: hidden;
+}
+
+.homepage-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Sleek Button Styling */
+.homepage-image button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    background: #000; 
+    color: #fff; 
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: 2px solid #fff; 
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.homepage-image button:hover {
+    background: #fff; 
+    color: #000;
+    transform: translateX(-50%) scale(1.05); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Styling */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #000; 
+    color: #fff; 
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff; 
+}
+
+.footer-section p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #ddd; 
+}
+
+.footer-section a {
+    display: block;
+    color: #fff; 
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #ccc; 
+}
+
+.social-link {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #fff; 
+    color: #000; 
+    transform: scale(1.1);
+}
+
+
+/* Keyframes to cycle through the background images */
+@keyframes backgroundChange {
+    0% {
+        background-image: url('https://wallpapers.com/images/featured/specialized-pyyhvv0l50o7fwg0.jpg');
+    }
+    33% {
+        background-image: url('https://wallpapers.com/images/featured/specialized-pyyhvv0l50o7fwg0.jpg');
+    }
+    66% {
+        background-image: url('https://mbaction.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-25-at-8.14.55-AM.png');
+    }
+    100% {
+        background-image: url('https://mbaction.com/wp-content/uploads/2018/09/Screen-Shot-2018-09-25-at-8.14.55-AM.png');
+    }
 }
 /* About Us Section */
 .about-section {
@@ -91,7 +212,7 @@ body {
 
 .about-text h1 {
     font-family: 'Raleway', sans-serif;
-    font-size: 3rem; /* Increase the font size */
+    font-size: 3rem; 
     margin-bottom: 20px;
 }
 
@@ -109,10 +230,78 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Image Section Styling */
+.image-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    position: relative; 
+}
+
+.image-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Raleway', sans-serif;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+    position: relative;
+}
+
+/* More prominent side decorative panels */
+.image-container::before,
+.image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 30px; 
+    background: linear-gradient(to bottom, #c3c3c3, #505050); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.image-container::before {
+    left: -35px; 
+}
+
+.image-container::after {
+    right: -35px; 
+}
+
+/* Image Styling */
+.image-container img {
+    width: 90%; 
+    max-width: 800px; 
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); 
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .image-container img {
+        width: 100%; 
+        max-width: 100%;
+    }
+}
+
+
+
+
 /* Support Section */
 .support-section {
-    max-height: 90vh; /* Set a max height for the section */
-    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 90vh; 
     padding: 20px;
     background: linear-gradient(to bottom, #ffffff, #f3f3f3);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -174,8 +363,8 @@ body {
     background: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-height: 60vh; /* Set a max height for the FAQ section */
-    overflow-y: auto; /* Enable scrolling within the FAQ section */
+    max-height: 60vh; 
+    overflow-y: auto; 
 }
 
 .faq-section h2 {
@@ -214,68 +403,262 @@ body {
     }
 }
 
-/* Bikes Page Styling - Scrollable */
-.bikes-section {
+/* Hero Section */
+.hero-section {
     text-align: center;
-    padding: 20px 20px 40px;
-    background-color: #f9f9f9;
-    max-height: 80vh; /* Limit height */
-    overflow-y: scroll; /* Enable vertical scrolling */
-    margin-top: 70px; /* Offset the header to prevent overlap */
-    height: 100%; /* Ensure full height of container */
+    padding: 100px 20px;
+    background: linear-gradient(to right, #959393, #585858);
+    color: #fff;
 }
 
-.bikes-section h1 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 2.5rem;
+.hero-section h1 {
+    font-size: 3rem;
     margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* Bikes Section */
+.bikes-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.bikes-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-family: 'Raleway', sans-serif;
     color: #333;
 }
 
 .bikes-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .bike-box {
-    background-color: white;
-    border: 1px solid #ccc;
+    background: #fff;
     border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
+    padding: 20px;
+    min-height: 400px; 
 }
 
 .bike-box img {
     width: 100%;
+    height: auto;
     border-radius: 10px;
-    margin-bottom: 15px;
 }
 
-.bike-box p {
+.bike-name {
+    font-size: 1.2rem;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.bike-price {
     font-size: 1rem;
-    color: #666;
-    line-height: 1.5;
+    color: #777;
+    margin-bottom: 10px;
 }
 
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.bike-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
 
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-    .bikes-container {
-        flex-direction: column;
-    }
+#bikeSearch {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
 
-    .bike-box {
-        width: 100%;
-    }
+#bikeSearch:focus {
+    border-color: #292929;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.bike-link {
+    text-decoration: none; 
+    color: inherit; 
+    display: block; 
+}
+
+.bike-link:hover .bike-box {
+    transform: translateY(-5px); 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bike-box img {
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.bike-link:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.bike-description {
+    font-size: 0.9rem; 
+    color: #555; 
+    margin-top: 5px;
+    line-height: 1.4; 
+}
+
+/* Cart section styling */
+.cart-section {
+    flex: 1; 
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; 
+}
+
+/* Styling for cart items */
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.cart-item img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.item-details {
+    flex: 1;
+    padding: 0 15px;
+}
+
+
+
+/* Cart summary styling */
+.cart-summary {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.cart-summary h2 {
+    margin-bottom: 10px;
+}
+
+.checkout {
+    background-color: #2b6cb0;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.checkout:hover {
+    background-color: #3182ce;
+    transform: scale(1.05);
+}
+
+/* Styling for buttons */
+.add-to-cart {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.add-to-cart:focus {
+    outline: none;
+}
+
+
+.bike-details-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bike-details {
+    display: flex;
+    gap: 20px;
+}
+
+.bike-image {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.details {
+    flex: 1;
+}
+
+.add-to-cart {
+    background-color: #2b6cb0;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #3182ce;
+    transform: scale(1.05);
 }
