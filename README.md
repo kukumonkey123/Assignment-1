@@ -23,17 +23,13 @@ The SpeedBikes website is designed for:
 - **Cycling Enthusiasts**: People passionate about cycling who are looking for high-quality bikes, gear, or inspiration.
 - **Health & Fitness Seekers**: Individuals aiming to improve their fitness through cycling.
 - **Families**: Parents and children interested in bikes for recreation or commuting.
-- **Community Builders**: Riders wanting to connect with others through events and programs like Outride.
-- **Beginner Riders**: New cyclists seeking guidance, quality products, and trusted support.
-
+  
 ---
 
 ## Value the Website Provides
 1. **Historical Insights**: Learn about the origins of SpeedBikes and its journey since 1974.
 2. **Product Range**: Comprehensive showcase of SpeedBikes' offerings, from road bikes to mountain bikes.
 3. **Support Resources**: Accessible support for troubleshooting, maintenance, and inquiries.
-4. **Health Promotion**: Advocates cycling for better health through programs like Outride.
-5. **Community Engagement**: Opportunities for users to connect via social media and events.
 
 ---
 
@@ -57,19 +53,9 @@ The following external resources and code were used in the development of the we
    - Source: [Placeholder.com](https://via.placeholder.com/).
    - Purpose: To represent visual elements during development.
 
-3. **CSS Frameworks or Snippets** (if applicable)
-   - Provide details if any frameworks like Bootstrap or Tailwind CSS were utilized.
-
-4. **Icons or Graphics**
-   - Any icons or additional graphics used, e.g., from FontAwesome.
-
----
-
-## Research Conducted
-- Studied competitor cycling websites for layout and design inspiration.
-- Researched SpeedBikes' history, milestones, and current offerings.
-- Reviewed user personas to understand the target audience.
-- Analyzed SEO best practices to ensure the website ranks well on search engines.
+3. **Picture Fading**
+   - Source: ChatGPT
+   - Purpose: to switch the pictures on index.html
 
 ---
 
@@ -81,5 +67,4 @@ Planned future updates to the website include:
 
 ---
 
-For any inquiries or contributions, please contact us at [support@speedbikes.com](mailto:support@speedbikes.com).
 
