@@ -50,7 +50,7 @@ The following external resources and code were used in the development of the we
    - Purpose: To enhance the typography of the website.
 
 2. **Placeholder Images**
-   - Source: [Placeholder.com](https://via.placeholder.com/).
+   - Source: [Specialized.com](https://speicalized.com/).
    - Purpose: To represent visual elements during development.
 
 3. **Picture Fading**
